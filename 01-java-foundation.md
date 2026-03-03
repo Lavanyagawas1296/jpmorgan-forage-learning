@@ -121,3 +121,188 @@ Clean structure
 Easy debugging
 
 Easy teamwork
+
+05️⃣ OOP Principles (Core Concept)
+What confused me
+
+Difference between abstraction and encapsulation
+
+Why inheritance is needed
+
+Real use of polymorphism
+
+What I understood
+
+Java follows 4 main OOP principles:
+
+1. Encapsulation
+
+Hiding data using private variables and exposing through getters/setters.
+
+class User {
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+
+Why?
+To protect data from direct modification.
+
+2. Abstraction
+
+Hiding implementation details.
+
+abstract class Animal {
+    abstract void sound();
+}
+
+User only knows what it does, not how it works.
+
+3. Inheritance
+
+Reusing parent class properties.
+
+class Animal {
+    void eat() {
+        System.out.println("Eating...");
+    }
+}
+
+class Dog extends Animal {
+}
+
+Dog automatically gets eat() method.
+
+4. Polymorphism
+
+Same method, different behavior.
+
+class Animal {
+    void sound() {
+        System.out.println("Some sound");
+    }
+}
+
+class Dog extends Animal {
+    void sound() {
+        System.out.println("Bark");
+    }
+}
+
+Method overriding = runtime polymorphism.
+
+Key takeaway
+
+OOP makes code:
+
+Reusable
+
+Maintainable
+
+Scalable
+
+06️⃣ Interfaces vs Abstract Class
+What confused me
+
+When to use interface?
+
+Why both exist?
+
+What I understood
+Interface
+
+100% abstraction (mostly)
+
+Multiple inheritance allowed
+
+interface Payment {
+    void pay();
+}
+Abstract Class
+
+Can have abstract + normal methods
+
+Only single inheritance
+
+abstract class Shape {
+    abstract void draw();
+
+    void display() {
+        System.out.println("Shape");
+    }
+}
+Difference Summary
+Feature	Interface	Abstract Class
+Multiple inheritance	✅	❌
+Constructors	❌	✅
+Variables	public static final	Any type
+Use case	Contract	Base class
+07️⃣ Exception Handling
+What confused me
+
+Checked vs Unchecked exceptions
+
+Why try-catch is needed
+
+What I understood
+
+Exceptions prevent program crash.
+
+Syntax
+try {
+    int a = 10 / 0;
+} catch (ArithmeticException e) {
+    System.out.println("Error occurred");
+}
+Types
+
+Checked → Compile-time (IOException)
+Unchecked → Runtime (NullPointerException)
+
+Finally block
+finally {
+    System.out.println("Always runs");
+}
+
+Runs whether exception happens or not.
+
+Key takeaway
+
+Proper exception handling = stable backend.
+
+08️⃣ Collections Framework
+What confused me
+
+Difference between List, Set, Map
+
+When to use which
+
+What I understood
+List
+
+Ordered
+
+Allows duplicates
+
+List<String> list = new ArrayList<>();
+Set
+
+No duplicates
+
+Set<String> set = new HashSet<>();
+Map
+
+Key-value pair
+
+Map<Integer, String> map = new HashMap<>();
+When to use what?
+Situation -> Use
+Ordered data ->	List
+Unique values -> Set
+Key-value lookup -> Map
