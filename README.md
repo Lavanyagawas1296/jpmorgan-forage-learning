@@ -13,9 +13,8 @@ This repository documents my transition from writing Java programs to understand
 
 🎓 Certificate of Completion
 
-(Upload your certificate as certificate.png inside the repo and then use this:)
 
-![JPMorgan Certificate](certificate.png)
+![JPMorgan Certificate]([View Certificate](certificate.pdf))
 
 If you don’t embed the image, it feels incomplete.
 
